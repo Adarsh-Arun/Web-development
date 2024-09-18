@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <style>
+            body {
+                  font-family: Arial, sans-serif;
+                }
+                
+            
+                form {
+                  max-width: 400px;
+                  margin: 0 auto;
+                  padding: 20px;
+                  border: 1px solid #ccc;
+                  border-radius: 5px;
+                }
+                
+                label {
+                  display: block;
+                  margin-bottom: 8px;
+                }
+                
+                input[type="text"],
+                input[type="email"],
+                input[type="password"],
+                input[type="number"],
+                select,
+                
+                textarea {
+                  width: 100%;
+                  padding: 8px;
+                  border: 1px solid #fd3535;
+                  border-radius: 4px;
+                  margin-bottom: 15px;
+                  box-sizing: border-box;
+                }
+                
+                input[type="submit"] {
+                  background-color: #4CAF50;
+                  color: white;
+                  padding: 10px 15px;
+                  border: none;
+                  border-radius: 4px;
+                  cursor: pointer;
+                  font-size: 16px;
+                }
+                
+                input[type="submit"]:hover {
+                  background-color: #45a049;
+                }
+            .item-1{
+                  display: grid;
+                  grid-template-columns: 20% 20% 20% 20% 20%;
+                  /* border: 1px solid black; */
+              }
+              .item-2{
+                  display: grid;
+                  grid-template-columns: 20% 20% 20% 20% 20%;
+                  /* border: 1px solid black; */
+              }
+              .head{
+                  display: grid;
+                  grid-template-columns: 20% 20% 20% 20% 20%;
+                  /* border: 1px solid black; */
+                  font-weight: bold;
+                  border-bottom: 1px solid black;
+              }
+              .burger,.sandwich{
+                  width: 100px;
+              }
+              .shopping{
+                  align-items: center;
+                  text-align: center;
+                  border: 1px solid black;
+                  border-radius: 20px;
+                  padding: 30px;
+              }
+              .reciept
+              {
+                  border: 1px solid grey;
+                  padding: 30px;
+                  padding-top: 10px;
+                  border-radius: 20px;
+                  /* text-align: center; */
+                  width: 150px;
+                  margin-left: 44%;
+              }
+              button{
+                  background-color: rgb(0, 0, 154);
+                  border: none;
+                  padding: 20px;
+                  border-radius: 10px;
+                  color: white;
+              }
+              input,p,span{
+                  margin-top: 20px;
+                  font-family: 'Poppins', sans-serif;
+              }
+              .heading{
+                  text-align: center;
+              }
+              .submit{
+                  text-align: center;
+              }
+      </style>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./assignment5(1).js">
+</head>
+<body>
+      <h1>Shopping Cart</h1>
+      <div class="shopping">
+            <div class="head">
+                  <div class="image">
+                        <p>Product</p>
+                  </div>
+                  <div class="descr">
+                        <p>Product Description</p>
+                  </div>
+                  <div class="price">
+                        <p>Price</p>
+                  </div>
+                  <div class="q">
+                        <p>Quantity</p>
+                  </div>
+                  <div class="totamt">
+                        <p>Total</p>
+                  </div>
+            </div>
+            <div class="item-1">
+                           <img class="image" src="C:\Users\Rishu Raj\Desktop\Study Material\photo-1625813506062-0aeb1d7a094b.avif">
+                  <div class="desc">
+                        <p class="text">a sandwich consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll.</p>
+                  </div>
+                  <div class="price">
+                        <p id="money1"></p>
+                  </div>
+                  <div class="quantity">
+                        <input oninput="itemtotal()" id="quant1"></input>
+                  </div>
+                  <div class="total">
+                        <p id="tot1"></p>
+                  </div>
+            </div>
+            <div class="item-2">
+                  <div class="image">
+                        <img src="./big-sandwich-plate.jpg" alt="" class="sandwich">
+                  </div>
+                  <div class="desc">
+                        <p class="text">A sandwich is a meat or poultry filling between two slices of bread, a bun or a biscuit.</p>
+                  </div>
+                  <div class="price">
+                        <p id="money2"></p>
+                  </div>
+                  <div class="quantity">
+                        <input oninput="itemtotal()" id="quant2"></input>
+                  </div>
+                  <div class="total">
+                        <p id="tot2"></p>
+                  </div>
+            </div>
+      </div>
+      <div class="submit">
+            <br><b><b>
+            <a href="C:\Users\Rishu Raj\Desktop\2213132\.vscode\payment_extra.html">payment </a>
+            <br><br></b>
+      </div>
+      <div class="reciept">
+            <p class="heading">Reciept</p><br>
+            <span id="squant1"></span><span> Burger &emsp;&emsp;&emsp; &emsp; $</span><span id="stot1"></span><br><br>
+            <span id="squant2"></span><span> Sandwich &emsp;&emsp;&emsp; $</span><span id="stot2"></span><br><br>
+            <span>Total Amount&emsp;&emsp;$</span><span id="subtotal"></span>
+      </div>
+      <div class="submit">
+              
+      </div>
+
+      <script src="./assignment5(1).css"></script>
+</body>
+</html>
