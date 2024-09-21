@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Assignment 3</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+        }
+        
+    
+        form {
+          max-width: 400px;
+          margin: 0 auto;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        
+        label {
+          display: block;
+          margin-bottom: 8px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select,
+        
+        textarea {
+          width: 100%;
+          padding: 8px;
+          border: 1px solid #fd3535;
+          border-radius: 4px;
+          margin-bottom: 15px;
+          box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+          background-color: #45a049;
+        }
+      </style>
+    <script>
+        function add(){
+            var a = parseInt(document.getElementById("num1").value)
+            var b = parseInt(document.getElementById("num2").value)
+            var result = a + b 
+            document.getElementById("result").innerHTML = "The sum is " + result
+             
+        }
+        function sub(){
+            var a = parseInt(document.getElementById("num1").value)
+            var b = parseInt(document.getElementById("num2").value)
+            var result = a - b 
+            document.getElementById("result").innerHTML = "The sub is " + result
+        }
+        function mul(){
+            var a = parseInt(document.getElementById("num1").value)
+            var b = parseInt(document.getElementById("num2").value)
+            var result = a * b 
+            document.getElementById("result").innerHTML = "The multiplication is " + result
+             
+        }
+        function div(){
+            var a = parseInt(document.getElementById("num1").value)
+            var b = parseInt(document.getElementById("num2").value)
+            var result = a / b 
+            document.getElementById("result").innerHTML = "The division is " + result
+             
+        }
+
+
+
+</script>
+</head>
+<body>
+<h1>CALCULATOR</h1>
+<p>Enter your first number</p>
+<input type="text" id="num1">
+<p>Enter your second number</p>
+<input type="text" id="num2"> <br> <br>
+<input type="button" value="Addition" onclick=add()>
+<input type="button" value="Substraction" onclick=sub()>
+<input type="button" value="Multiplication" onclick=mul()>
+<input type="button" value="Division" onclick=div()>
+<p id="result"></p>
+</body>
+</html>
