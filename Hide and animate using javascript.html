@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js">
+
+        </script>
+
+        <script>
+
+        $(document).ready(function(){
+
+            $("#animate").click(function(){
+            
+            var div = $("div");
+            
+            div.animate({left: '100px'}, "slow"); 
+            div.animate({fontSize: '3em'}, "slow");
+            
+            
+            
+            });
+            
+            });
+        </script>
+      
+</head>
+
+<body>
+
+    <p>lets hide this paragraph
+    </p>
+
+upper paragraph is hidden
+<button>hide </button>
+
+<script>
+    $(document).ready(function () {
+        $("button").click(function(){
+                       $("p").hide();
+                       });
+                       })
+                    </script>
+
+
+                    
+
+<div style="background: #98bf21; height: 200px;
+
+ width:300px;
+position:absolute;">Welcome To Jquery Animation</div>
+
+<button> animate</button>
+
+
+    </body>
+
+    </html>
+
+        
