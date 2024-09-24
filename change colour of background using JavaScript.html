@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>assignment 4</title>
+        <script>
+            var i=0;
+            function CallMe()
+        {
+            var color=['red','green','yellow'];
+            color=['red','green','yellow','black','silver','gray','white','maroon','purple','lime','blue','teal'];
+            document.bgColor=color[i];
+            i++;
+            if(i==color.length)
+            i=0;
+        }
+        </script>
+    </head>
+    <body>
+        <p>Color Chaanging Button Page</p>
+        <p>Click Button </p>
+        <input type="button" value="Change Color" onclick="CallMe()">
+   </body>
+</html>
