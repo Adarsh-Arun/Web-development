@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Admission Form</h2>
+        <form method="post">
+            <input type="text" name="studentID" placeholder="Student ID" required><br>
+            <input type="text" name="studentName" placeholder="Student Name" required><br>
+            <input type="email" name="emailID" placeholder="Email ID" required><br>
+            <input type="number" name="twelfthGrade" placeholder="12th Grade" required><br>
+            <input type="number" name="JEEScore" placeholder="JEE Score" required><br>
+            <button type="submit">Submit</button>
+        </form>
+
+        <?php
+        // Array to store student data
+        $students = [];
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $student = array(
+                "studentID" => $_POST['studentID'],
+                "studentName" => $_POST['studentName'],
+                "emailID" => $_POST['emailID'],
+                "twelfthGrade" => $_POST['twelfthGrade'],
+                "JEEScore" => $_POST['JEEScore']
+            );
+
+            // Storing student data
+            array_push($students, $student);
+        }
+
+        // Sorting students based on JEEScore
+        usort($students, function ($a, $b) {
+            return $b['JEEScore'] - $a['JEEScore'];
+        });
+
+        // Displaying top 5 students based on JEEScore
+        echo "<h2>Top 5 Students Based on JEEScore</h2>";
+        echo "<table>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Email ID</th>
+                <th>12th Grade</th>
+                <th>JEE Score</th>
+            </tr>";
+        for ($i = 0; $i < min(5, count($students)); $i++) {
+            echo "<tr>
+                <td>{$students[$i]['studentID']}</td>
+                <td>{$students[$i]['studentName']}</td>
+                <td>{$students[$i]['emailID']}</td>
+                <td>{$students[$i]['twelfthGrade']}</td>
+                <td>{$students[$i]['JEEScore']}</td>
+            </tr>";
+        }
+        echo "</table>";
+        ?>
+    </div>
+</body>
+
+</html>
