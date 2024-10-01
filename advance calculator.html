@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <script>
+        function add(){
+            a=parseINT( Document.getelementbyid('a').value ="a");
+            b=parseINT( Document.getelementbyid('b').value ="b");
+            r=a+b;
+            Document.getelementbyid("result").innerhtml =r;
+
+
+        }
+        
+        function sub(){
+            a=parseINT( Document.getelementbyid('a').value ="a");
+            b=parseINT( Document.getelementbyid('b').value ="b");
+            r=a-b;
+            Document.getelementbyid("result").innerhtml =r;
+
+
+        }
+        function mul(){
+            a=parseINT( Document.getelementbyid('a').value ="a");
+            b=parseINT( Document.getelementbyid('b').value ="b");
+            r=a*b;
+            Document.getelementbyid("result").innerhtml =r;
+
+
+        }
+        function div(){
+            a=parseINT( Document.getelementbyid('a').value ="a");
+            b=parseINT( Document.getelementbyid('b').value ="b");
+            r=a/b;
+            Document.getelementbyid("result").innerhtml =r;
+
+
+        }
+    </script>
+    </head>
+    <body>
+        <h1> calc</h1>
+        <form>
+            enter the first number :--
+            <input type ="text" id ="a" /> <br>
+            enter the second number :--
+            <input type = "text" id ="b"/> <br>
+           
+            <input type = "button" value ="add" onclick="add()"/><br>
+            <input type = "button" value ="sub" onclick="sub()"/><br>
+            <input type = "button" value ="mul" onclick="mul()"/><br>
+            <input type = "button" value ="div" onclick="div()"/><br>
+
+            <br>
+
+
+            <label for="country">options:</label>
+    <select id="country" name="country">
+        <option value="Select Country">Select option</option>
+      <option value="add">addition</option>
+      <option value="sub">subtration</option>
+      <option value="mul">multiplication</option>
+      <option value="div">division</option>
+    
+    
+    </select>
+            <br><br>
+
+    <input type = "button" value ="result" onclick="div()" /> 
+    <input type = "text" id = r /> 
+        
+        </form>
+        <p id="result"> </p>
+
+
+    </body>
+</html>
